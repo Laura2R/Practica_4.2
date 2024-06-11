@@ -70,4 +70,23 @@ public class Calcular {
         }
         return (double) a / b;
     }
+
+    /**
+     * <p>Calcula la potencia de un número.</p>
+     *
+     * @param base Base de la potencia.
+     * @param exponente Exponente de la potencia (debe ser no negativo).
+     * @return El resultado de elevar la base al exponente.
+     * @throws IllegalArgumentException Si el exponente es negativo.
+     */
+    public int potencia(int base, int exponente) {
+        if (exponente < 0) {
+            throw new IllegalArgumentException("El exponente debe ser un número no negativo");
+        }
+        int resultado = 1;
+        for (int i = 0; i < exponente; i++) {
+            resultado *= base;
+        }
+        return resultado;
+    }
 }
